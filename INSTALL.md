@@ -1,6 +1,6 @@
 # Installing ShipKit (without the npm registry)
 
-> If `gh release download shipkit-v0.1.0` answers 404, the 0.1.0 release is still a draft: publish it from this
+> If `gh release download shipkit-v0.2.0` answers 404, the 0.2.0 release is still a draft: publish it from this
 > repository's Releases page first (or ask the maintainer), then the command below works.
 
 ShipKit is not published to npm yet. A release is a single bundle tarball, and installing is a local operation: no npm
@@ -21,11 +21,11 @@ account, no `npm publish` and no registry upload of ShipKit's packages.
 
 ```bash
 mkdir -p ~/shipkit && cd ~/shipkit
-gh release download shipkit-v0.1.0 -p 'shipkit-0.1.0-bundle.tar.gz'
-tar xzf shipkit-0.1.0-bundle.tar.gz
+gh release download shipkit-v0.2.0 -p 'shipkit-0.2.0-bundle.tar.gz'
+tar xzf shipkit-0.2.0-bundle.tar.gz
 ```
 
-Or download `shipkit-0.1.0-bundle.tar.gz` from the Releases page into `~/shipkit` and extract it. The bundle contains:
+Or download `shipkit-0.2.0-bundle.tar.gz` from the Releases page into `~/shipkit` and extract it. The bundle contains:
 
 | Path | What it is |
 |---|---|
@@ -38,7 +38,7 @@ Or download `shipkit-0.1.0-bundle.tar.gz` from the Releases page into `~/shipkit
 Check the bundle before running it:
 
 ```bash
-cd shipkit-0.1.0
+cd shipkit-0.2.0
 shasum -a 256 -c SHA256SUMS   # or: sha256sum -c SHA256SUMS
 ```
 
@@ -109,7 +109,7 @@ cd shipit
 pnpm install
 bash shipkit/release.sh --out dist/shipkit
 cd dist/shipkit
-tar czf ../shipkit-0.1.0-bundle.tar.gz -C .. shipkit
+tar czf ../shipkit-0.2.0-bundle.tar.gz -C .. shipkit
 ```
 
 ## Troubleshooting
@@ -120,7 +120,7 @@ tar czf ../shipkit-0.1.0-bundle.tar.gz -C .. shipkit
   ShipKit itself is already installed.
 - **`./shipkit` cannot find the toolchain** — the launcher reads `SHIPKIT_HOME` at run time; set it in your shell if you
   moved the toolchain out of `~/.local/share/shipkit`.
-- **`./shipkit doctor` prints `contracts unknown`** — known cosmetic issue in 0.1.0: the generated record omits the
+- **`./shipkit doctor` prints `contracts unknown`** — known cosmetic issue in 0.2.0: the generated record omits the
   contracts range; `doctor` still resolves the kernel and paths.
 
 ## What this does not prove

@@ -31,8 +31,8 @@ pnpm shipkit doctor
 Doctor prints the record the project carries beside the kernel it installed:
 
 ```
-version: shipkit-tpl-mono-repo-std@0.1.0, contracts ^0.1.0
-kernel:  @shipkit/contracts 0.1.0
+version: shipkit-tpl-mono-repo-std@0.2.0, contracts ^0.2.0
+kernel:  @shipkit/contracts 0.2.0
 change:  current
 ```
 

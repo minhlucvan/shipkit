@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="release 0.1.0 (draft)" src="https://img.shields.io/badge/release-0.1.0%20draft-f6c177?style=flat-square">
+  <img alt="release 0.2.0 (draft)" src="https://img.shields.io/badge/release-0.2.0%20draft-f6c177?style=flat-square">
   <img alt="license MIT" src="https://img.shields.io/badge/license-MIT-4ce0b3?style=flat-square">
   <img alt="node 24" src="https://img.shields.io/badge/node-24-339933?style=flat-square&logo=node.js&logoColor=white">
   <img alt="pnpm 12" src="https://img.shields.io/badge/pnpm-12-f69220?style=flat-square&logo=pnpm&logoColor=white">
@@ -47,11 +47,11 @@ ShipKit is **not on npm yet**. A release is one tarball: the kernel packages, th
 
 ```bash
 mkdir -p ~/shipkit && cd ~/shipkit
-gh release download shipkit-v0.1.0 -p 'shipkit-0.1.0-bundle.tar.gz'
-shasum -a 256 -c shipkit-0.1.0-bundle.tar.gz.sha256
-tar xzf shipkit-0.1.0-bundle.tar.gz
+gh release download shipkit-v0.2.0 -p 'shipkit-0.2.0-bundle.tar.gz'
+shasum -a 256 -c shipkit-0.2.0-bundle.tar.gz.sha256
+tar xzf shipkit-0.2.0-bundle.tar.gz
 
-bash shipkit-0.1.0/install.sh ~/projects/acme \
+bash shipkit-0.2.0/install.sh ~/projects/acme \
   --set projectName="Acme" --set projectSlug=acme
 
 cd ~/projects/acme
@@ -63,7 +63,7 @@ pnpm install
 No registry account and no `npm publish` are involved. The installer puts the local tarballs into a toolchain under
 `~/.local/share/shipkit`, renders the standard template and writes a `./shipkit` launcher.
 
-> The 0.1.0 release is prepared as a **draft**. Publish it from the
+> The 0.2.0 release is prepared as a **draft**. Publish it from the
 > [Releases page](https://github.com/minhlucvan/shipkit/releases) to make the download live.
 > Full instructions: [INSTALL.md](INSTALL.md) · ten-minute path: [QUICKSTART.md](QUICKSTART.md).
 
@@ -169,7 +169,7 @@ A green gate is a shape check, not a product review. Read this before adopting i
 
 ## Status
 
-- **0.1.0** — the bundle release; prepared as a draft on the [Releases page](https://github.com/minhlucvan/shipkit/releases).
+- **0.2.0** — the bundle release; prepared as a draft on the [Releases page](https://github.com/minhlucvan/shipkit/releases).
 - **No npm publication.** The kernel and template install from the bundle's local tarballs.
 - **Source extraction pending.** This repository is the distribution home; the source is still built and tested in the
   ShipIt repository, and the same extraction moves the source, the checks and the release workflow here.

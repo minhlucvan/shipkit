@@ -6,9 +6,9 @@ The shortest honest path from nothing to a project whose gate is green and whose
 
 ```bash
 mkdir -p ~/shipkit && cd ~/shipkit
-gh release download shipkit-v0.1.0 -p 'shipkit-0.1.0-bundle.tar.gz'
-tar xzf shipkit-0.1.0-bundle.tar.gz
-bash shipkit-0.1.0/install.sh ~/projects/my-product --set projectName="My Product" --set projectSlug=my-product
+gh release download shipkit-v0.2.0 -p 'shipkit-0.2.0-bundle.tar.gz'
+tar xzf shipkit-0.2.0-bundle.tar.gz
+bash shipkit-0.2.0/install.sh ~/projects/my-product --set projectName="My Product" --set projectSlug=my-product
 cd ~/projects/my-product
 pnpm install
 ```
