@@ -1,5 +1,8 @@
 # Installing ShipKit (without the npm registry)
 
+> If `gh release download shipkit-v0.1.0` answers 404, the 0.1.0 release is still a draft: publish it from this
+> repository's Releases page first (or ask the maintainer), then the command below works.
+
 ShipKit is not published to npm yet. A release is a single bundle tarball, and installing is a local operation: no npm
 account, no `npm publish` and no registry upload of ShipKit's packages.
 

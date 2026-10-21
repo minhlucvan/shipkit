@@ -17,8 +17,9 @@ It never wears a product's name — a project's paths, packages and boards come 
 
 > **Status — 0.1.0.** This repository is the kit's distribution home. The source extraction from the ShipIt repository
 > is still pending; until it lands, the release bundle published here is built and tested there, and the same extraction
-> moves the source, the checks and the release workflow into this repository. The artifacts and the docs here are the
-> consumer contract; the "what this does not prove" section below is the honest part.
+> moves the source, the checks and the release workflow into this repository. The 0.1.0 bundle is prepared as a
+> **draft release**: publishing it from the Releases page makes the commands below live. The docs here are the consumer
+> contract; the "what this does not prove" section below is the honest part.
 
 ## Install it (no npm publication yet)
 
