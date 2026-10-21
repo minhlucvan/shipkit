@@ -30,6 +30,15 @@ pnpm verify          # the same gate through the project's own scripts
 
 ## 4. Ship the first change
 
+If you are in an interactive DeepSeek Harness session, set the session's goal first so every turn works the same
+outcome:
+
+```text
+/goal ship my-first-change: the check, the implementation, the archive
+```
+
+Then let the project's ledger name the work:
+
 ```bash
 ./shipkit plan                      # the tracker's next eligible item
 pnpm openspec new change my-first-change --schema feature

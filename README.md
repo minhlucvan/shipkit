@@ -84,6 +84,31 @@ A change moves through the same seven steps in every project:
 The verification file pastes a real red run and a real green run. A killed run is unrun — the loop does not accept a
 memory of a test.
 
+## Sessions
+
+ShipKit projects are shipped by sessions, not by one prompt. A session takes one roadmap item, carries it through the
+loop and leaves the tree green. If your harness has a goal command, set the session's objective before the first turn
+so every later turn works the same one.
+
+In an interactive **DeepSeek Harness** session that is `/goal`:
+
+```text
+/goal ship M0-3: the first slice, its gate, and its archived change
+```
+
+| Command | What it does |
+|---|---|
+| `/goal` | the current objective, durable phase, round count and the next valid command |
+| `/goal <objective>` | creates and arms the session goal, or replaces a completed one |
+| `/goal edit <objective>` | changes the objective without changing the phase or activation |
+| `/goal pause` / `/goal resume` | pauses an active goal, or re-arms a stopped one |
+| `/goal clear` | clears the goal while keeping its durable history |
+
+The command belongs to the harness, not to ShipKit: headless runs do not need it, and another harness may persist the
+objective differently. What ShipKit adds is the answer to **what** the goal should be — `./shipkit plan` and
+`./shipkit next` read it from the project's ledger, not from the session's memory. A session's goal and the project's
+roadmap are two records: the goal keeps the run pointed at one outcome, the roadmap keeps the project's next item.
+
 ## The CLI
 
 ```text
