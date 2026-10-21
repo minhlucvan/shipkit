@@ -1,0 +1,6 @@
+node_modules/
+.shipkit-toolchain/
+*.tgz
+*.tar.gz
+dist/
+.DS_Store
