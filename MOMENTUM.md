@@ -46,3 +46,30 @@ Momentum is adopted only if a controlled trial proves it: three mockups (static 
 method versus Momentum, the same starting project and model/time budget, quality held fixed. It must show a better or
 equal production checklist and no more defect escapes, with materially better cycle time and tokens per unit. The
 numbers are published for both arms, including where Momentum loses.
+
+## Hard-won rules (ToolShed trial)
+
+The first real roadmap built with Momentum scored 6/10 until four rules were enforced. They are now part of the method
+and the generated project's gate:
+
+1. **An enabler is a dependency.** A seed set, screen kit or QA harness is leverage only when the items it serves list
+   it in `depends_on`; RICE alone will schedule the consumers first. The Method ships an `enabler: yes` field and the
+   planning skills say to wire the dependency.
+2. **Every milestone plans its distribution.** A shelf with no users is a catalogue. The launch/invite item belongs in
+   the first milestone beside the supply that makes joining worthwhile; the ToolShed launch scored 4000 RICE and moved
+   to the front once it existed.
+3. **Confidence over 60 cites evidence.** The generated `pnpm check` now fails an item whose `confidence` is above 60
+   with no `evidence:` line (a path, a number, a person). A confident guess is worse than a humble one; the ToolShed
+   test lowered six items from 90/80/70 to 50 rather than invent evidence.
+4. **Batch by context, not by slice.** Three batches (supply+launch, screen kit+preview, lend flow) beat nine
+   single-screen changes. `qa:batch` reads the units table and its `Context budget:` line, and the project's `verify`
+   runs it.
+
+### What the gate now enforces in a generated project
+
+- `production-contract` — the project has a written gate, checklist and preview rule.
+- `deferred-scope` — every debt entry names cost, trigger, owner and expiry.
+- `momentum-evidence` — high confidence cites evidence.
+- `qa:a11y` and `qa:batch` run inside `pnpm verify`; `verify:light` is the preview tier.
+
+The roadmap itself still lives or dies by its evidence: Momentum makes the questions unavoidable, not the answers true.
